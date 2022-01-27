@@ -70,7 +70,7 @@ public class Network {
 	 * @param name a unique name for the device.
 	 * @return the new device
 	 */
-	public DeviceInterface makeDFlipFlop( String name ) {
+	public DeviceInterface makeDFlipFlop( String name) {
 		Assert.check( getDeviceByName(name)==null, "Device name is not unique." ) ;
 		DeviceInterface device = factory.makeNewDFlipFlop( name ) ;
 		devices.add( device ) ;

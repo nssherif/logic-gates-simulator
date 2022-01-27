@@ -66,7 +66,10 @@ public class Net implements NetInterface {
 			if( i != outputPortIndex ) {
 				Value oldValue = ports.get(i).getValue() ;
 				ports.get(i).setValue( value ) ;
-				change = change || oldValue != value ; } }
+				change = change || oldValue != value ; 
+			} 
+		}
+		
 		return change ;
 	}
 	
@@ -82,6 +85,7 @@ public class Net implements NetInterface {
 	public Value getValue() {
 		Assert.check( outputPortIndex != -1,
 				"Net "+name+" does not have an output port." ) ;
-		return ports.get( outputPortIndex ).getValue() ;
+		return ports.get( 0 ).getValue() ;
+		
 	}
 }

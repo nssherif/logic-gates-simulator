@@ -21,22 +21,22 @@ class DigitalFactory {
 	}
 
 	public InputDeviceInterface makeNewInput(String name) {
-		Assert.toBeDone() ; return null ;
+		return new InputDevice(name);
 	}
 
 	public DeviceInterface makeNewAndGate(String name) {
-		Assert.toBeDone() ; return null ;
+		return new AndGate(name);
 	}
 
 	public DeviceInterface makeNewNotGate(String name) {
-		Assert.toBeDone() ; return null ;
+		return new NotGate(name);
 	}
 
 	public DeviceInterface makeNewOrGate(String name) {
-		Assert.toBeDone() ; return null ;
+		return new OrGate(name);
 	}
 
 	public DeviceInterface makeNewDFlipFlop(String name) {
-		Assert.toBeDone() ; return null ;
+		return new DFlipFlop(name);
 	}
 }
